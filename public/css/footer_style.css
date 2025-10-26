@@ -18,9 +18,9 @@
     align-items: start;
 }
 
-.footer-logo {
- height: 60px;
-    width: auto;
+.footer-logo img {
+ height: 324px;
+  width: auto;
 }
 
 .footer-col h4 {
