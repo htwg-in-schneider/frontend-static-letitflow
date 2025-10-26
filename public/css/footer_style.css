@@ -1,153 +1,29 @@
-/* Reset + Tokens */
-*,*::before,*::after{box-sizing:border-box}
-:root{
-  --bg:#fffaf5; --line:#f2d5c0; --text:#3b1d16; --accent:#b04e3d; --btn:#d78b74;
+/* =================== FOOTER =================== */
+footer {
+  background: #fff5f0;
+  padding: 30px 50px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid var(--line);
+  flex-wrap: wrap;
 }
 
-/* ===== Basis-Layout (Seiten-Content) ===== */
-body{
-  font-family: "Arial", sans-serif;
-  margin:0;
-  color:var(--text);
-  max-width:1200px;
-  margin-inline:auto;
-  padding-inline:24px;
-  background:#fffdfb;
+.footer-links {
+  display: flex;
+  gap: 50px;
 }
 
-/* ===== HEADER / NAVBAR ===== */
-.header{
-  display:flex; justify-content:space-between; align-items:center;
-  background:var(--bg);
-  /* Höhe & Abstand */
-  max-height:169px;           /* Desktop: max 169px */
-  padding:10px 40px;
-  margin-top:38px;
-
-  /* Doppellinie (Desktop dicker) */
-  border-top:10px solid var(--line);
-  border-bottom:10px solid var(--line);
-
-  position:sticky; top:0; z-index:100;
-  overflow:hidden;             /* nichts ragt über die Höhe hinaus */
+.footer-links ul {
+  list-style: none;
+  padding: 0;
 }
 
-/* Logo (skaliert in die Header-Höhe) */
-.logo{display:flex; align-items:center; gap:8px}
-.logo img{
-  height:100%;
-  max-height:149px;            /* 149 + 10px padding oben + 10px unten = 169 */
-  width:auto;
+.footer-links li {
+  margin: 5px 0;
 }
 
-/* Navigation (Desktop sichtbar) */
-.nav{display:flex; align-items:center; gap:20px}
-.nav a{ text-decoration:none; color:var(--text); font-weight:500; transition:color .2s }
-.nav a:hover{ color:var(--accent) }
-
-/* Icons rechts */
-.icons{display:flex; align-items:center; gap:15px}
-.icons span{ text-decoration:underline; font-weight:500; cursor:pointer }
-.icons img{ height:26px; cursor:pointer }
-
-/* Hamburger (mobil sichtbar) */
-.menu-toggle{
-  display:none; width:24px; height:18px; padding:0; border:0; background:transparent; cursor:pointer;
-  flex-direction:column; justify-content:space-between;
-}
-.menu-toggle span{height:3px; width:100%; background:var(--accent); border-radius:2px}
-
-/* ===== HERO ===== */
-.hero img{
-  width:80%; max-width:1000px; height:auto; display:block; margin:0 auto;
-}
-
-/* ===== INTRO ===== */
-.intro{text-align:center; padding:40px 20px}
-.intro button{
-  background:var(--btn); border:0; color:#fff; padding:14px 32px;
-  font-size:1.15rem; border-radius:6px; cursor:pointer; margin-top:12px;
-}
-.intro button:hover{background:var(--accent)}
-
-/* ===== PRODUKTE ===== */
-.products{padding:40px}
-.products h2{text-align:center; margin-bottom:30px}
-.product-grid{display:flex; flex-wrap:wrap; justify-content:center; gap:20px}
-.card{border:1px solid var(--line); padding:15px; width:250px; text-align:center; background:#fff; border-radius:6px}
-.card img{width:100%; height:auto; border-radius:6px}
-.card button{background:var(--btn); color:#fff; border:0; padding:8px 16px; border-radius:5px; margin-top:10px; cursor:pointer}
-.card button:hover{background:var(--accent)}
-
-/* ===== FOOTER ===== */
-footer{background:#fff5f0; padding:30px 50px; display:flex; justify-content:space-between; border-top:2px solid var(--line)}
-.footer-links{display:flex; gap:50px}
-.footer-links ul{list-style:none; padding:0}
-
-/* ===== RESPONSIVE ===== */
-
-/* Mobile ≤ 640px */
-@media (max-width:640px){
-  body{font-size:14px; padding-inline:10px; max-width:none}
-
-  .header{
-    position:relative;
-    max-height:50px;          /* Mobile: max 50px */
-    padding:5px 20px;         /* kompakter */
-    /* dünnere Linien */
-    border-top:5px solid var(--line);
-    border-bottom:5px solid var(--line);
-  }
-
-  /* Logo mittig im Header */
-  .logo{
-    position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
-  }
-  .logo img{
-    height:100%;
-    max-height:40px;          /* 40 + 5 + 5 padding = 50 */
-    width:auto;
-  }
-
-  /* Hamburger links einblenden */
-  .menu-toggle{display:flex}
-
-  /* Icons rechts oben */
-  .icons{margin-left:auto; gap:12px; position:relative; z-index:100}
-
-  /* Dropdown-Navigation unter dem Header */
-  .nav{
-    display:none; flex-direction:column; background:var(--bg);
-    position:absolute; left:0; right:0; top:50px;   /* exakt unter 50px Header */
-    border-top:5px solid var(--line);
-    text-align:center; padding:12px 0; z-index:90;
-  }
-  .nav.active{display:flex}
-  .nav a{font-size:1rem; padding:8px 0}
-
-  /* Karten/Grid kompakter */
-  .product-grid{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; justify-items:center}
-  .card{width:100%; max-width:170px; padding:10px; text-align:left}
-  .card h3{font-size:.9rem}
-  .card button{font-size:.8rem; padding:6px 10px}
-
-  .intro{padding:20px 10px; font-size:1rem}
-  .intro button{font-size:.9rem; padding:8px 14px}
-}
-
-/* Tablet / kleiner Desktop */
-@media (min-width:641px) and (max-width:1023px){
-  .logo img{max-height:120px}
-}
-
-/* Großer Desktop ≥ 1024px */
-@media (min-width:1024px){
-  .menu-toggle{display:none}
-  .nav{display:flex}
-  .product-grid{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; align-items:start}
-  .card{width:100%; max-width:380px; text-align:center}
-  .hero{padding:32px 0}
-  .hero img{width:80%; max-width:1000px; margin:0 auto}
-  .intro{font-size:1.25rem; line-height:1.6}
-  .intro button{font-size:1.2rem; padding:14px 34px}
+.footer-logo {
+  font-weight: bold;
+  color: var(--accent);
+  font-size: 1.2rem;
 }
