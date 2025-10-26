@@ -23,7 +23,9 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: var(--bg);
+  max-height: 169px;  
   padding: 10px 40px;
+  margin-top: 38px;
 
   /* zwei Linien oben/unten */
   border-top: 10px solid var(--line);
@@ -203,7 +205,8 @@ body {
   .header {
     padding: 8px 20px;
     position: relative;
-    height: 110px;
+    max-height: 50px;
+    margin-top: 10px;
 
     /* dünnere Linien */
     border-top: 5px solid var(--line);
