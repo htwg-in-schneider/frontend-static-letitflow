@@ -7,24 +7,39 @@
   <link rel="stylesheet" href="css/header_style.css" />
   <link rel="stylesheet" href="css/body_style.css" />
   <link rel="stylesheet" href="css/footer_style.css" />
+   <style>
+    body {
+      background-color: #FFFBF5;
+    }
+  </style>
 </head>
 <body>
+
+<!-- Google Fonts Inter (für Figma-Typo) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <header class="header">
   <button class="menu-toggle" id="menu-toggle" aria-label="Menü öffnen" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
 
-  <div class="logo">
-    <img src="img/hauptlogo_header.png" alt="LetItFlow Logo" />
+  <div class="left-group">
+    <div class="logo">
+      <img src="img/hauptlogo_header.png" alt="LetItFlow Logo">
+    </div>
+
+    <nav class="nav" id="nav">
+      <a href="#">Produkte</a>
+     
+    </nav>
   </div>
 
-  <nav class="nav" id="nav">
-    <a href="#">Produkte</a>
-  </nav>
   <div class="icons">
     <span>DE</span>
-    <img src="img/benutzerIcon_Desktop.png" alt="Benutzer Icon" />
+    <img src="img/benutzerIcon_Desktop.png" alt="Benutzer">
+    <img src="img/warenkorb_icon.png" alt="Warenkorb">
   </div>
 </header>
 
