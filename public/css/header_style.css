@@ -17,11 +17,11 @@
     justify-content: space-between;
     align-items: center;
     background: var(--bg);
-    height: 100px;
+    height: 80px;
     padding: 8px 40px 12px 40px;
     margin-top: 38px;
-    border-top: 10px solid var(--line);
-    border-bottom: 10px solid var(--line);
+    border-top: 6px solid var(--line);
+    border-bottom: 6px solid var(--line);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -46,6 +46,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 60px;
 }
 
 
@@ -58,14 +59,14 @@
 .nav a {
     font-family: "Inter", sans-serif;
     font-weight: 400;
-    font-size: 34px;
+    font-size: 25px;
     line-height: 150%;
     letter-spacing: -0.023em;
     color: #000;
     text-decoration: none;
     display: flex;
     align-items: center;
-    height: 63px;
+    height: 30px;
     transition: color .2s ease;
 }
 
@@ -144,7 +145,7 @@
     
     .logo {
         position: absolute;
-        left: 50%;
+        left: 40%;
         top: 50%;
         transform: translate(-50%, -50%);
     }
@@ -205,13 +206,6 @@
 }
 
 
-@media (min-width:641px) and (max-width:1023px) {
-    .logo img {
-        height: 100px;
-        top: 10px;
-    }
-}
-
 
 @media (min-width:1024px) {
     .menu-toggle {
@@ -221,4 +215,6 @@
     .nav {
         display: flex;
     }
+
+
 }
