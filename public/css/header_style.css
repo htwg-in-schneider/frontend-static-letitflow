@@ -43,10 +43,9 @@
 }
 
 .logo img {
-    height: 160px;
-    width: auto;
-    position: relative;
-    top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
