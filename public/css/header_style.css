@@ -130,10 +130,10 @@
 @media (max-width: 640px) {
     .header {
         position: relative;
-        height: 100px;
+        height: 80px;
         margin-top: 10px;
-        border-top: 5px solid var(--line);
-        border-bottom: 5px solid var(--line);
+        border-top: 3px solid var(--line);
+        border-bottom: 3px solid var(--line);
     }
 
     .menu-toggle {
