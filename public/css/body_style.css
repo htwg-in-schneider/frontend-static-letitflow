@@ -1,7 +1,6 @@
 body {
-  font-family: "Arial", sans-serif;
   margin: 0;
-  color: var(--text);
+  color: #3b1d16;
   max-width: 1200px;
   margin-inline: auto;
   padding-inline: 24px;
@@ -12,20 +11,24 @@ body {
   text-align: center;
   padding: 40px 20px;
 }
-.intro button {
-  background: var(--btn);
-  border: 0;
+
+.button {
+  background-color: #d78b74;
   color: #fff;
-  padding: 14px 32px;
-  font-size: 1.15rem;
+  border: 1px solid #c06b54;
   border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
   cursor: pointer;
-  margin-top: 12px;
-}
-.intro button:hover {
-  background: var(--accent);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
+.button:hover {
+  background-color: #c46d57;
+  transform: translateY(-1px);
+}
 .products {
   padding: 40px;
 }
@@ -40,7 +43,7 @@ body {
   gap: 20px;
 }
 .card {
-  border: 1px solid var(--line);
+  border: 1px solid #f2d5c0;
   padding: 15px;
   width: 250px;
   text-align: center;
@@ -52,18 +55,6 @@ body {
   height: auto;
   border-radius: 6px;
 }
-.card button {
-  background: var(--btn);
-  color: #fff;
-  border: 0;
-  padding: 8px 16px;
-  border-radius: 5px;
-  margin-top: 10px;
-  cursor: pointer;
-}
-.card button:hover {
-  background: var(--accent);
-}
 
 @media (max-width: 640px) {
   body {
@@ -71,37 +62,37 @@ body {
     padding-inline: 10px;
     max-width: none;
   }
+
   .intro {
     padding: 20px 10px;
     font-size: 1rem;
   }
-  .intro button {
+
+  .button {
     font-size: 0.9rem;
     padding: 8px 14px;
   }
+
   .product-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
     justify-items: center;
   }
+
   .card {
     width: 100%;
     max-width: 170px;
     padding: 10px;
     text-align: left;
   }
+
   .card h3 {
     margin: 8px;
     font-size: 1rem;
     word-wrap: break-word;
     overflow-wrap: break-word;
     white-space: normal;
-  }
-
-  .card button {
-    font-size: 0.8rem;
-    padding: 6px 10px;
   }
 }
 
@@ -112,24 +103,29 @@ body {
     gap: 24px;
     align-items: start;
   }
+
   .card {
     width: 100%;
     max-width: 380px;
     text-align: center;
   }
+
   .hero {
     padding: 32px 0;
   }
+
   .hero img {
     width: 80%;
     max-width: 1000px;
     margin: 0 auto;
   }
+
   .intro {
     font-size: 1.25rem;
     line-height: 1.6;
   }
-  .intro button {
+
+  .button {
     font-size: 1.2rem;
     padding: 14px 34px;
   }
